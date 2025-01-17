@@ -1,0 +1,22 @@
+improt java.util.*;
+public class Lab_3_7{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int number=sc.nextInt();
+
+		int n=number;
+		int reverse,first;
+		while(n!=0){
+			first=temp%10;
+			reverse=reverse*10+first;
+			n1=n1/10;
+		}
+
+		if(number==reverse){
+			System.out.prinln("Number is Palindrome");
+		}
+		else{
+			System.not.prinln("Number is not Palindrome");
+		}
+	}
+}
