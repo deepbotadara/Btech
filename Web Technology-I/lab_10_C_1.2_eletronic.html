@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Functions Demo with Electronics</title>
+  <script>
+    let products = ["Laptop", "Smartphone", "Tablet", "Smartwatch", "Headphones"];
+
+    function displayProducts() {
+      const productList = document.getElementById("product-list");
+      productList.innerHTML = products.join(", ");
+    }
+
+    function addProduct() {
+      const newProduct = document.getElementById("add-product").value;
+      products.push(newProduct);
+      displayProducts();
+    }
+
+    function removeLastProduct() {
+      products.pop();
+      displayProducts();
+    }
+
+    function removeFirstProduct() {
+      products.shift();
+      displayProducts();
+    }
+
+    function addProductAtStart() {
+      const newProduct = document.getElementById("add-product").value;
+      products.unshift(newProduct);
+      displayProducts();
+    }
+
+    function removeProductAtPosition() {
+      const index = parseInt(document.getElementById("remove-position").value);
+      products.splice(index, 1);
+      displayProducts();
+    }
+
+    function sortProducts() {
+      products.sort();
+      displayProducts();
+    }
+  </script>
+</head>
+<body>
+  <h1>Array Functions Demo with Electronic Products</h1>
+  <button onclick="displayProducts()">Show Products</button>
+  <h3>Products: <span id="product-list"></span></h3>
+
+  <input type="text" id="add-product" placeholder="Add a product">
+  <button onclick="addProduct()">Push</button>
+  <button onclick="removeLastProduct()">Pop</button>
+  <button onclick="removeFirstProduct()">Shift</button>
+  <button onclick="addProductAtStart()">Unshift</button>
+
+  <input type="number" id="remove-position" placeholder="Remove at position">
+  <button onclick="removeProductAtPosition()">Splice</button>
+  <button onclick="sortProducts()">Sort</button>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout</title>
+   <style>
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: large;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 78rem;
+    padding: 15px;
+    margin: auto;
+    background-color: #ADD8E6;
+}
+
+
+.header {
+    background-color: #8B008B; /* Dark magenta background */
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    background-color: #FFA500; /* Orange background */
+}
+
+.entries {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.entry {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: black;
+    height: 9rem;
+    color: white;
+    padding: 20px;
+    margin-top: 4.2rem;
+}
+
+.footer {
+    background-color: #0000FF; /* Blue background */
+    color: white;
+    padding: 10px;
+}
+
+   </style>
+   </head>
+<body>
+    <div class="page">
+       <h1> Page</h1>
+        <header class="header">Header</header>
+        <main class="content">
+            <div class="entries">
+                <h1>content</h1>
+                <div class="entry">Entry</div>
+                <div class="entry">Entry</div>
+                <div class="entry">Entry</div>
+            </div>
+            <aside class="sidebar">Sidebar</aside>
+        </main>
+        <footer class="footer" >@Darshan University-rajkot</footer>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="event"> Mouse events</div>
+    <p id="eventmsg">Event occurred</p>
+    <script>
+        let eventBox = document.getElementById("event");
+        let eventMessage = document.getElementById("eventmsg");
+
+        function eventname(event) {
+            eventBox.textContent = event.type; 
+            eventMessage.textContent = `Last event: ${event.type}`;
+        }
+
+        eventBox.addEventListener("click", eventname);
+        eventBox.addEventListener("dblclick", eventname);
+        eventBox.addEventListener("mouseover", eventname);
+        eventBox.addEventListener("mouseup", eventname);
+        eventBox.addEventListener("mousedown", eventname);
+        
+    </script>
+</body>
+</html>

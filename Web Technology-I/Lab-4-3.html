@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            table-layout: fixed;
+            background-color: white;
+        }
+
+        tr {
+            width: 300px;
+            height: 50px;
+        }
+
+        td {
+            padding: 6px;
+        }
+
+        label {
+            color: green;
+        }
+
+        input,
+        textarea {
+            width: 95%;
+        }
+
+        input[type="radio"] {
+
+            margin-right: 5px;
+        }
+
+        input[type="range"] {
+            background-color: green;
+        }
+
+        .container {
+            background-color: #02a274;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgb(8, 8, 8);
+            width: 600px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <form>
+                    <td align="center" colspan="2"
+                        style="size:100px; background-color: aliceblue; color: black; font-size: 30px; font-family:serif;">
+                        Create Account</th>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="fname">First Name*</label><br>
+                    <input type="text" name="fname" id="fname" placeholder="enter your first name" required>
+                </td>
+                <td>
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" name="lname" id="lname" placeholder="enter your last name">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="email">Email*</label><br>
+                    <input type="email" name="email" id="email" placeholder="enter your email">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password*</label>
+                    <br><input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </td>
+                <td><label for="cpassword">Confirm Password*</label>
+                    <br><input type="password" name="password" id="password" placeholder="Enter your password again"
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="gender">Gender</label>
+                    <input type="radio" name="gender" id="male" value="male"><label for="male"
+                        style="color: black;">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"><label for="female"
+                        style="color: black;">Female</label>
+                </td>
+                <td><label for="hobbies">Hobbies</label>
+
+                    <input type="checkbox" name="music" id="music"><label for="music"
+                        style="color: black;">Music</label>
+                    <input type="checkbox" name="sports" id="sports"><label for="sports"
+                        style="color: black;">Sports</label>
+                    <input type="checkbox" name="travel" id="travel"><label for="travel"
+                        style="color: black;">Travel</label>
+                    <input type="checkbox" name="movies" id="movies"><label for="movies"
+                        style="color: black;">Movies</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="sourceofincome">Source of Income</label><br><input type="text" name="sourceofincome"
+                        id="sourceofincome" value="Employed"><label for="sourceofincome"></label></td>
+                <td><label for="income">Range</label>
+                    <br><input type="range" value="20" min="20" max="100"
+                        oninput="document.getElementById('income_value').innerHTML=this.value" style="width:80%"><span
+                        id="income_value" style="background-color: green; color: WHITE; ">20</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="profilepic">Upload Profile Picture</label><br>
+                    <input type="file" name="profilepic" id="profilepic" accept=".jpeg.jpg.png">
+                </td>
+                <td><label for="age">Age</label><br><input type="text" name="age" id="age"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="bio">Bio</label><br><textarea name="bio" id="bio" cols="5"
+                        rows="=5"></textarea></td>
+            </tr>
+            <tr style=" background-color: aliceblue;">
+                <td colspan="2" align="right"><input type="SUBMIT" value="create"
+                        style="width: 75px; height: 40px; background-color: green; border: 0; color: white;"></td>
+            </tr>
+
+        </table>
+        </form>
+    </div>
+</body>
+</html>

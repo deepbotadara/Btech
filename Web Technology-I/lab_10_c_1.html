@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Functions Demo</title>
+  <script>
+    let numbers = [10, 20, 30, 40, 50];
+
+    function displayNumbers() {
+      const numberList = document.getElementById("number-list");
+      numberList.innerHTML = numbers.join(", ");
+    }
+
+    function addNumber() {
+      const newNumber = parseInt(document.getElementById("add-number").value);
+      numbers.push(newNumber);
+      displayNumbers();
+    }
+
+    function removeLastNumber() {
+      numbers.pop();
+      displayNumbers();
+    }
+
+    function removeFirstNumber() {
+      numbers.shift();
+      displayNumbers();
+    }
+
+    function addNumberAtStart() {
+      const newNumber = parseInt(document.getElementById("add-number").value);
+      numbers.unshift(newNumber);
+      displayNumbers();
+    }
+
+    function removeNumberAtPosition() {
+      const index = parseInt(document.getElementById("remove-position").value);
+      numbers.splice(index-1, 1);
+      displayNumbers();
+    }
+
+    function sortNumbers() {
+      numbers.sort((a, b) => a - b);
+      displayNumbers();
+    }
+  </script>
+</head>
+<body>
+  <h1>Array Functions Demo with Numbers</h1>
+  <button onclick="displayNumbers()">Show Numbers</button>
+  <h3>Numbers: <span id="number-list"></span></h3>
+
+  <input type="number" id="add-number" placeholder="Add a number">
+  <button onclick="addNumber()">Push</button>
+  <button onclick="removeLastNumber()">Pop</button>
+  <button onclick="removeFirstNumber()">Shift</button>
+  <button onclick="addNumberAtStart()">Unshift</button>
+
+  <input type="number" id="remove-position" placeholder="Remove at position">
+  <button onclick="removeNumberAtPosition()">Splice</button>
+  <button onclick="sortNumbers()">Sort</button>
+</body>
+</html>

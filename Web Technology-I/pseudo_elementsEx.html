@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ::before pseudo-element */
+        h1::before {
+            content: "👉 "; /* Adds an icon or text before the heading */
+            /* color: rgb(0, 60, 255); */
+        }
+
+        /* ::after pseudo-element */
+        h1::after {
+            content: " 🚀"; /* Adds a rocket emoji after the heading */
+        }
+
+        /* ::first-letter pseudo-element */
+        p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(255, 0, 17);
+        }
+
+        /* ::first-line pseudo-element */
+        p::first-line {
+            color: green;
+            font-style: italic;
+        }
+
+        /* ::selection pseudo-element */
+        ::selection {
+            background-color: yellow; /* Changes background of selected text */
+            color: black;
+        }
+
+        /* Adding some padding to the paragraph for better view */
+        p {
+            padding: 10px;
+        }
+
+    </style>
+    <title>Pseudo-Element Example</title>
+</head>
+<body>
+
+    <h1>Pseudo-Element Demonstration</h1>
+
+    <!-- Paragraph to demonstrate ::first-letter, ::first-line, and ::selection -->
+    <p>
+        This is a sample paragraph to demonstrate the usage of pseudo-elements like ::first-letter, ::first-line, and ::selection. When you select this text, you should see a highlighted effect from the ::selection pseudo-element. The first letter and the first line of this paragraph are styled differently as well!
+    </p>
+
+</body>
+</html>
+

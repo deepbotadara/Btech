@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Sort Example</title>
+  <script>
+    // Bubble sort function
+    function bubbleSort(arr) {
+      let n = arr.length;
+      for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+          if (arr[j] > arr[j + 1]) {
+            // Swap arr[j] and arr[j+1]
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+      return arr;
+    }
+
+    function sortArray() {
+      let input = document.getElementById("array-input").value;
+      let arr = input.split(",").map(Number); // Convert input to an array of numbers
+      let sortedArr = bubbleSort(arr);
+      document.getElementById("sorted-array").innerText = sortedArr.join(", ");
+    }
+  </script>
+</head>
+<body>
+  <h1>Bubble Sort Example</h1>
+  <p>Enter numbers separated by commas (e.g., 4,2,7,1,3):</p>
+  <input type="text" id="array-input" placeholder="Enter numbers">
+  <button onclick="sortArray()">Sort</button>
+
+  <h3>Sorted Array: <span id="sorted-array"></span></h3>
+</body>
+</html>

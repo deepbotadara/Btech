@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+    </style>
+
+    <script> 
+        let faculties = [
+	{
+		FacultyID: 1,
+		FacultyName: "Dr. Gopi Sanghani",
+		FacultyDesignation: "Dean - School of Computer Science",
+		FacultyEducationQualification: "Ph.D. , M.E. (CE)",
+		FacultyExperience: "22+ Years",
+        FacultyWorkingSince: "Jul-2012",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg"
+	},
+
+    {
+		FacultyID: 2,
+		FacultyName: "Dr. Nilesh Gambhava",
+		FacultyDesignation: "Professor",
+		FacultyEducationQualification: "Ph.D. , M.E. (CE)",
+		FacultyExperience: "21+ Years",
+        FacultyWorkingSince: "Jul-2009",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/3---28-04-2023-02-02-42.jpg"
+	},
+    
+    {
+		FacultyID: 3,
+		FacultyName: "Dr. Pradyumansinh Jadeja",
+		FacultyDesignation: "Professor",
+		FacultyEducationQualification: "Ph.D., M.E. (CE)",
+		FacultyExperience: "19+ Years",
+        FacultyWorkingSince: "Jul-2009",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg"
+	},
+
+    {
+		FacultyID: 4,
+		FacultyName: "Prof. Firoz Sherasiya",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "Ph.D.(Pursuing), M.E. (CE)",
+		FacultyExperience: "19+ Years",
+        FacultyWorkingSince: "Dec-2022",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/12---28-04-2023-02-06-51.jpg"
+	},
+    
+    {
+		FacultyID: 5,
+		FacultyName: "Prof. Swati Sharma",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "PhD(Pursuing), M.Tech. (CSE)",
+		FacultyExperience: "16+ Years",
+        FacultyWorkingSince: "May-2013",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/11---29-04-2023-01-44-21.jpg"
+	},
+
+    {
+		FacultyID: 6,
+		FacultyName: "Prof. Mayur Padia",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "M.E. (CE)",
+		FacultyExperience: "16+ Years",
+        FacultyWorkingSince: "Jul-2011",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/13---28-04-2023-02-07-48.jpg"
+	},
+
+    {
+		FacultyID: 7,
+		FacultyName: "Prof. Jayesh Vagadiya",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "M.E. (CE)",
+		FacultyExperience: "9+ Years",
+        FacultyWorkingSince: "Jul-2015",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/219---28-04-2023-02-09-01.jpg"
+	},
+
+    {
+		FacultyID: 8,
+		FacultyName: "Prof. Shruti Maniar",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "ME(CE),BE(IT)",
+		FacultyExperience: "8+ Years",
+        FacultyWorkingSince: "Jul-2021",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/336---28-04-2023-01-34-37.jpg"
+	},
+
+    {
+		FacultyID: 9,
+		FacultyName: "Prof. Dharmik Vasiyani",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "ME(CE)",
+		FacultyExperience: "7+ Years",
+        FacultyWorkingSince: "Nov-2021",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/335---01-05-2024-07-40-49.JPG"
+	},
+
+    {
+		FacultyID: 10,
+		FacultyName: "Prof. Madhuresh Fichadiya",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "BE(CE)",
+		FacultyExperience: "3+ Years",
+        FacultyWorkingSince: "Jul-2021",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/331---28-04-2023-01-33-39.jpg"
+	},
+
+    {
+		FacultyID: 11,
+		FacultyName: "Prof. Arjun Bala",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "Ph.D.(Pursuing), M.Tech.(CSE)",
+		FacultyExperience: "14+ Years",
+        FacultyWorkingSince: "Jul-2013",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg"
+	},
+
+    {
+		FacultyID: 12,
+		FacultyName: "Prof. Vijay Shekhat",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "M.E. (CE)",
+		FacultyExperience: "12+ Years",
+        FacultyWorkingSince: "Jul-2012",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/16---28-04-2023-02-08-00.jpg"
+	},
+
+
+    {
+		FacultyID: 13,
+		FacultyName: "Prof. Ashok Badresiya",
+		FacultyDesignation: "Assistant Professor",
+		FacultyEducationQualification: "Ph.D. (Pursuing), M.E. (CE)",
+		FacultyExperience: "11+ Years",
+        FacultyWorkingSince: "Dec-2022",
+		FacultyImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/220---28-04-2023-02-08-14.jpg"
+	},
+
+]
+</script>
+
+</head>
+
+<body>
+    <div class="row">
+        <script type="text/javascript">
+            for(fac of faculties){
+                document.write('<div class="card">');  // Corrected here
+                document.write('<img src="'+fac.FacultyImage+'" alt="Image not found">');
+                document.write('<div>');
+                document.write('<h5 class="card-title">'+fac.FacultyName+'</h5>');
+                document.write('<p class="card-text">'+fac.FacultyEducationQualification+'</p>');
+                document.write('<p class="card-text">Designation: '+fac.FacultyDesignation+'</p>');
+                document.write('<p class="card-text">'+fac.FacultyExperience+'</p>');
+                document.write('</div>');
+                document.write('</div>');
+            }
+        </script>
+    </div>
+</body>
+</html>

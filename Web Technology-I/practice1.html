@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for all paragraphs */
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Pseudo-class :hover changes background color when mouse hovers over */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Pseudo-class :first-child targets the first list item */
+        li:first-child {
+            color: green;
+        }
+
+        /* Pseudo-class :nth-child(odd) targets odd list items */
+        li:nth-child(3) {
+            background-color: lightgray;
+        }
+
+        /* Pseudo-class :focus changes input when clicked/focused */
+        input:focus {
+            border: 2px solid blue;
+            background-color: lightyellow;
+        }
+
+        /* Pseudo-class :checked styles a checked checkbox */
+        input[type="checkbox"]:checked {
+            outline: 2px solid green;
+            background-color: lightgreen;
+        }
+
+        /* Pseudo-class :active applies when button is being clicked */
+        button:active {
+            background-color: orange;
+            color: white;
+        }
+
+        /* Pseudo-class :visited to style visited links */
+        a:visited {
+            color: purple;
+        }
+
+        /* Pseudo-class :disabled to style disabled elements */
+        input:disabled {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+    <title>Pseudo-Class Example</title>
+</head>
+<body>
+
+    <h1>Pseudo-Class Demonstration</h1>
+
+    <!-- Link examples with pseudo-class :hover and :visited -->
+    <p><a href="#">Hover over me (Unvisited Link)</a></p>
+    <p><a href="https://example.com">Visited Link</a></p>
+
+    <!-- List example with :first-child and :nth-child -->
+    <ul>
+        <li>First item (Styled by :first-child)</li>
+        <li>Second item</li>
+        <li>Third item (Odd item styled by :nth-child)</li>
+        <li>Fourth item</li>
+    </ul>
+
+    <!-- Input examples with :focus and :disabled -->
+    <p>
+        <input type="text" placeholder="Focus on me">
+        <input type="text" placeholder="I'm disabled" disabled>
+    </p>
+
+    <!-- Checkbox example with :checked -->
+    <p>
+        <label>
+            <input type="checkbox" id="check1"> Click me (Unchecked)
+        </label>
+        <label>
+            <input type="checkbox" id="check2" checked> Checked by default
+        </label>
+    </p>
+
+    <!-- Button example with :active -->
+    <p>
+        <button>Click me</button>
+    </p>
+
+</body>
+</html>

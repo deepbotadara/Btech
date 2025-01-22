@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Covid-19 Vaccinne Registration From</h1>
+    <form method="get" action="">
+        <table align="center" width="400px" cellpadding="5">
+            <tr>
+                <td><label for="fname">First name:</label></td>
+                   <td> <input type="text" id="fname" name="fname"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last name:</label></td>
+                   <td> <input type="text" id="lname" name="lname"></td>
+            </tr>
+            <tr>
+                <td><label for="aadhar">Aadhar Number:</label></td>
+                   <td> <input type="number" id="aadhar" name="aadhar"></td>
+            </tr>
+            <tr>
+                <td><label for="vn">Vaccine Name:</label></td>
+                <td><select name="vn" id="vn">
+                    <option selected disabled value="">Please Select Vaccine Name </option>
+                    <option value="covacc">Co-Vaccine</option>
+                    <option value="covi">Covishield</option>
+                    </select></td>
+               </tr>
+               <td><label for="vn">Vaccine Center Name:</label></td>
+               <td><select name="vcn" id="vcn">
+                <option selected disabled value="">Please Select Vaccine Center Name </option>
+                <option value="gudavadi">Gundavadi</option>
+                <option value="kevdavadi">Kevdavadi</option>
+                </select></td>
+           </tr>
+           <tr>
+            <td><label for="date dose">Date Of Dose:</label></td>
+            <td><input type="date" id="date dose" name="date dose"></td>
+            </tr>
+            <tr>
+            <td><label for="dosenum">Dose Number:</label></td>
+            <td><input type="number" id="dosenum" name="dosenum"></td>
+            </tr>  
+            <tr>
+                <td><button type="submit" value="submit">Click Here</button></td>
+                <td><input type="reset" value="Cancel" ></td>
+            </tr>
+    
+        </table>
+    </form>
+</body>
+</html>

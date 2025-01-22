@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+  <script>
+    function calculate() {
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let num2 = parseFloat(prompt("Enter the second number:"));
+      let operation = prompt("Enter the operation like. +, -, *, /:");
+      let result;
+
+      switch(operation) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          result = num1 / num2;
+          break;
+        case '%':
+          result = num1 % num2;
+        default:
+          document.write("Invalid operation!");
+          return;
+      }
+
+      document.write("The result is: " + result);
+      alert("The result is: "+ result);
+    }
+
+    calculate();
+  </script>
+</body>
+</html>

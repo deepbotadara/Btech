@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changebg()"> Colour changing button</button>
+    <script>
+        function changebg(){
+            
+            const colors = ['red', 'green', 'blue', 'pink'];
+            const random = Math.floor(Math.random() * colors.length); // Fixed 'color' to 'colors'
+            document.body.style.background = colors[random]; // Fixed 'documnet' to 'document'
+        }
+    </script>
+</body>
+</html>
